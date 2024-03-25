@@ -117,6 +117,59 @@ html {
   -webkit-text-fill-color: dimgray;
 }
 
+/* project box on project page */
+.project-box {
+  display: flex; /* make a flexbox type */
+  flex-direction: column; /* projects arranged in columns */
+  flex-wrap: nowrap; /* do not wrap text */
+  margin: 0; /* space between project boxes and body text */
+  align-items: center;  /* as a group of links, align center */
+  overflow: hidden; /* hides content if frame is shrunk */
+  justify-content: space-around;
+  text-align: center;
+  height: 250px;
+  width: 100%;
+  background-color: darkslategrey;
+}
+
+.project-box ul {
+  display: flex; /* display is not inherited, need to define for each child */
+  list-style-type: none; /* ul will automatically have bullets, remove them */
+  padding: 0 1rem; /* for some reason, doesn't sit center without this */
+}
+
+/* style for the navigation bar link */
+.project-box ul li {
+  display: inline-block;
+  /*color: whitesmoke; !* color of text of nav links *!*/
+  /*font-family: Ojuju; !* font to use for the links *!*/
+  margin: 20px;
+  border: 5px #fffefc solid;
+  padding: 10px;
+  height: 150px;
+  width: 250px;
+  text-align: center;
+}
+
+/* remove the border from the last element in the navigation bar */
+/*#nav-bar ul li:last-child {*/
+/*  border-right: none; !* not currently using borders at all, but kept to see how to use first/last child *!*/
+/*}*/
+
+/* format the links in the navigation bar */
+.page-link {
+  display: table-cell;
+  text-decoration: none;
+  vertical-align: top;
+  font-family: FugazOne;
+  font-size: 1.4rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: #fffefc;
+}
+
+
+
 /* HERO IMAGE */
 /* hero image layer is not a flexbox */
 .hero-image {
@@ -180,6 +233,10 @@ html {
   height: 1vh;
 }
 
+.blank-border {
+  height: 2vh;
+}
+
 /* everything below this border is part of the same flexbox */
 .main-box {
   display: flex;
@@ -201,19 +258,65 @@ html {
   letter-spacing: 0.25rem;
 }
 
+.main-text h2 {
+  font-size: 2rem;
+  text-align: left;
+  font-family: Ojuju;
+  font-weight: bolder;
+  /*font-family: "Kohinoor Devanagari", monospace, Verdana, sans-serif; !* try first font, if doesn't render, use Verdana *!*/
+  color: black;
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+}
+
+.main-text h3 {
+  font-family: "Kohinoor Devanagari", monospace, Verdana, sans-serif; /* try first font, if doesn't render, use Verdana */
+  font-weight: lighter;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0 0.75rem;
+}
+
 /* add a top margin if there is no banner, to accomodate fixed nav bar */
 #no-banner {
   margin-top: 100px;
 }
 
+.featured-text {
+  text-align: center !important; /* need important to override parent, otherwise will default to left align */
+}
+
 /* add links in main text here so they appear similar to main paragraph text */
-.main-text p, .main-text a {
+.main-text p {
   font-family: "Kohinoor Devanagari", monospace, Verdana, sans-serif; /* try first font, if doesn't render, use Verdana */
   font-weight: lighter;
   text-align: left;
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin-bottom: 1.5rem;
+  padding: inherit;
+}
+
+.inline-link {
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  font-size: 1.4rem;
+  color: darkslategrey;
+  font-family: FugazOne;
+}
+
+.inline-link:hover, .page-link:hover {
+  font-family: FugazOne;
+  font-size: 1.4rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: lightcoral;
+}
+
+.inline-logo {
+  height: 1.6rem;
+  width: 1.6rem;
+  vertical-align: center;
 }
 
 /* add a few more link-specific settings for main text links */
