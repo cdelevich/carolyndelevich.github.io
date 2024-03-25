@@ -117,7 +117,7 @@ html {
 /* hero image layer is not a flexbox */
 .hero-image {
   height: 45vh;  /* image uses 65% of the viewport */
-  background-image: url("../images/home_banner.png"); /* link to my background image */
+  background-image: url("./images/home_banner.png"); /* link to my background image */
   background-size: cover; /* takes full width of the viewport */
   background-position: center; /* aligns to center of the viewport */
   background-repeat: no-repeat;
