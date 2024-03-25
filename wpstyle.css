@@ -31,17 +31,17 @@ html {
 /* import custom fonts that I downloaded via Google Fonts */
 @font-face {
   font-family: Satisfy;
-  src: url("../fonts/Satisfy/Satisfy-Regular.ttf");
+  src: url("./fonts/Satisfy/Satisfy-Regular.ttf");
 }
 
 @font-face {
   font-family: Ojuju;
-  src: url("../fonts/Ojuju/Ojuju-VariableFont_wght.ttf");
+  src: url("./fonts/Ojuju/Ojuju-VariableFont_wght.ttf");
 }
 
 @font-face {
   font-family: FugazOne;
-  src: url("../fonts/Fugaz_One/FugazOne-Regular.ttf");
+  src: url("./fonts/Fugaz_One/FugazOne-Regular.ttf");
 }
 
 /* NAVIGATION BAR */
