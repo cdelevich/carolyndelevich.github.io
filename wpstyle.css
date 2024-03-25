@@ -53,6 +53,10 @@ html {
   margin: 0; /* space between nav bar and hero panel beneath */
   background-color: darkslategrey; /* color of nav bar background */
   align-items: center;  /* as a group of links, align center */
+  position: fixed; /* keep the navigation bar in place as you scroll down the page */
+  top: 0; /* keep fixed to top of page */
+  width: 100%; /* need to specify width when using fixed position */
+  overflow: hidden; /* hides content if frame is shrunk */
 }
 
 #nav-bar ul {
@@ -121,7 +125,8 @@ html {
   background-size: cover; /* takes full width of the viewport */
   background-position: center; /* aligns to center of the viewport */
   background-repeat: no-repeat;
-
+  margin-top: 88px; /* add top margin to accomodate fixed navigation bar */
+  width: 100%;
 }
 
 /* hero image overlay text is, however, a flexbox */
@@ -136,6 +141,7 @@ html {
   text-align: center;
   color: black;
   margin: 0;
+  overflow: hidden;
 }
 
 .large-overlay {
@@ -174,9 +180,15 @@ html {
   height: 1vh;
 }
 
+/* everything below this border is part of the same flexbox */
+.main-box {
+  display: flex;
+  flex-direction: column;
+}
+
 /* settings for all font in this section, mostly related to text layout on page */
 .main-text {
-  padding-left: 0.75rem;
+  padding: 0 0.75rem;
 }
 
 /* set the text style for the body main header */
@@ -186,14 +198,28 @@ html {
   text-align: left;
   font-family: Ojuju;
   font-weight: bold;
+  letter-spacing: 0.25rem;
 }
 
-.main-text p {
-  font-family: Verdana, sans-serif;
+/* add a top margin if there is no banner, to accomodate fixed nav bar */
+#no-banner {
+  margin-top: 100px;
+}
+
+/* add links in main text here so they appear similar to main paragraph text */
+.main-text p, .main-text a {
+  font-family: "Kohinoor Devanagari", monospace, Verdana, sans-serif; /* try first font, if doesn't render, use Verdana */
   font-weight: lighter;
   text-align: left;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   margin-bottom: 1.5rem;
 }
 
+/* add a few more link-specific settings for main text links */
+/* not working, meant to add github logo next to link but it overlaps */
+/*.main-text a {*/
+/*  background: url("./images/github_logo.png") no-repeat 100%;*/
+/*  background-position: left;*/
+/*  background-size: 1.5rem 1.5rem;*/
+/*}*/
